@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/Poppins" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cubano" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: black;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 0.5fr 5fr 0.5fr;
+            grid-template-rows: 5rem 35rem 55rem 60rem 55rem 20rem 10rem;
+            gap: 2.5%;
+        }
+
+        .navBar {
+            background-color: transparent;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .home {
+            background-color: transparent;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+
+        .dot {
+            display: inline-block;
+        }
+
+        .links a {
+            color: white;
+        }
+
+        .links .fbLogoIntro:hover {
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: #1877F2;
+            padding-bottom: 3.39px;
+        }
+
+        .links .rdtLogoIntro:hover {
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: #ED001C;
+        }
+
+        .links .ghLogoIntro:hover {
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: #171515;
+        }
+
+        .links .emlLogoIntro:hover {
+            border: 2px solid black;
+            background-color: #FBBC05;
+            padding-left: 0.4px;
+            padding-right: 0.32px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .skills {
+            background-color: ;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .projects {
+            background-color: transparent;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .blogs {
+            background-color: transparent;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .contact {
+            background-color: transparent;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .footer {
+            background-color: transparent;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .navBar {
+            font-weight: ;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-family: "Cubano", sans-serif;
+        }
+
+        .navLinkContent p {
+            display: inline-block;
+            padding-left: 4%;
+            margin-left: 5%;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: white;
+            margin-left: 8.5%;
+            margin-top: 0.2%;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .navLinkContent a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: ;
+        }
+
+        .navLinkContent a::after {
+            content: '';
+            width: 0;
+            display: block;
+            height: 3px;
+            margin: auto;
+            border-radius: 2px;
+            background-image: linear-gradient(to top, rgb(203, 24, 24), rgb(207, 116, 73));
+        }
+
+        .navLinkContent a:hover::after {
+            width: 100%;
+            transition: width 0.3s linear;
+
+        }
+
+        .navLinkContent a:hover {
+            background-image: linear-gradient(to top, rgb(203, 24, 24), rgb(207, 116, 73));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: 0.3s linear;
+        }
+
+        .home {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .aboutMe {
+            color: white;
+            margin-left: 8.5%;
+        }
+
+        .introp1 {
+            font-weight: ;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            font-family: "Cubano", sans-serif;
+        }
+
+        .introp2 {
+            margin-top: -7%;
+            font-size: 2.5rem;
+            font-family: "Cubano", sans-serif;
+        }
+
+        .introp3 {
+            margin-top: -7%;
+            font-weight: ;
+            font-family: "Cubano", sans-serif;
+        }
+
+        .introp4 {
+            margin-top: 5%;
+            font-weight: 550;
+        }
+
+        .home .introImg img {
+            width: 95%;
+            height: 95%;
+            margin-left: 5%;
+            opacity: 0.8;
+        }
+
+        .skills {
+            color: white;
+            text-align: center;
+        }
+
+        .skillsHeadTitle {
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+
+        .skillsp1 {
+            text-align: left;
+            font-size: 2.5rem;
+            font-family: "Cubano", sans-serif;
+            margin-left: 4%;
+        }
+
+        .skillsp2 {
+            margin-top: -3%;
+            text-align: left;
+            font-weight: 700;
+            margin-left: 4%;
+        }
+
+        .mySkills{
+            color: white;
+            margin-top: 5%;
+            font-weight: bolder;
+            text-align: left;
+            margin-left: 4%;
+            font-size: 1.5rem;
+        }
+
+        .mySkills p{
+            padding-bottom: 15px;
+        }
+
+        .projects {
+            color: white;
+            text-align: center;
+        }
+
+        .classForProjectsForNestedGrid{
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,350px);
+            grid-auto-rows: 25rem;
+            gap: 3rem;
+        }
+
+        .cardImg {
+            overflow: hidden;
+            height: 50%;
+        }
+
+        .cardImg:hover {
+            border-top-right-radius: 5rem;
+            border-bottom-left-radius: 5rem;
+            transition: 2s ease;
+        }
+
+        .projectsHeadTitle {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .projects img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            cursor: pointer;
+        }
+
+        .projects img:hover {
+            transform: scale(1.3);
+            transition: 2s ease;
+            filter: grayscale(100%);
+            opacity: 0.8;
+        }
+
+        .projectsHeadTitle {
+            font-size: 2.5rem;
+            font-family: "Cubano", sans-serif;
+        }
+
+        .projtTitle {
+            font-weight: 800;
+            margin-right: 74.5%;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+
+        }
+
+        .projtTitle:hover:after {
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+
+        .projtTitle:hover {
+            background-image: linear-gradient(to top, rgb(203, 24, 24), rgb(207, 116, 73));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: 0.3s linear;
+        }
+
+        .projtFooter{
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .projtFooter .projtAuthor p{
+            text-align: left;
+        }
+
+        .blogs {
+            color: white;
+            text-align: center;
+        }
+
+        .classForBlogsForNestedGrid{
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,350px);
+            grid-auto-rows: 25rem;
+            gap: 3rem;
+            
+        }
+
+        .blogsHeadTitle {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .blogtTitle:hover:after {
+            width: 100%;
+            transition: width 0.3s linear;
+        }
+
+        .blogTitle:hover {
+            background-image: linear-gradient(to top, rgb(203, 24, 24), rgb(207, 116, 73));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: 0.3s linear;
+        }
+
+
+        .blogs img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+
+        .blogs img:hover {
+            transform: scale(1.3);
+            overflow: hidden;
+            transition: 2s ease;
+            filter: grayscale(100%);
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .blogsHeadTitle {
+            font-size: 2.5rem;
+            font-family: "Cubano", sans-serif;
+        }
+
+        .blogTitle {
+            font-weight: 700;
+            margin-right: 74.5%;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+
+        }
+
+        .blogFooter p {
+            display: inline;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .blogAuthor {
+            margin-right: 34.5%;
+        }
+
+        .projtUpldDandT {}
+
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .contactHeadTitle {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .contactcp1 {
+            font-size: 2.5rem;
+            font-family: "Cubano", sans-serif;
+        }
+
+        .contactcp2 {
+            margin-top: -3%;
+            font-weight: 700;
+        }
+
+        .contact a {
+            color: white;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            font-style: normal;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer {
+            border: 4.5px solid;
+            border-top-color: white;
+            border-top-right-radius: 20rem;
+            border-top-left-radius: 20rem;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: ;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: black;
+        }
+
+        .flogo {
+            text-align: center;
+            padding-top: 1rem;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            font-family: "Cubano", sans-serif;
+        }
+
+        .cpr {
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .version {
+            text-align: center;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        @media only screen and (max-width: 1242px){
+            .container {
+            display: grid;
+            grid-template-columns: 0.5fr 5fr 0.5fr;
+            grid-template-rows: 0rem 30rem 55rem 55rem 55rem 20rem 10rem;
+            gap: 2.5%;
+        }
+
+        .navLinkContent p {
+            display: inline-block;
+            padding-left: 2.5%;
+            margin-left: 5%;
+        }
+
+        .home .introImg img {
+            width: 110%;
+            height: 100%;
+            margin-left: 5%;
+            opacity: 0.8;
+        }
+
+        .classForProjectsForNestedGrid{
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+            grid-auto-rows: 25rem;
+            gap: 3rem;
+        }
+
+        .classForBlogsForNestedGrid{
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+            grid-auto-rows: 25rem;
+            gap: 3rem;
+        }
+
+        .projtFooter p {
+            display: inline;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+
+        .projtAuthor {
+            margin-right: 20%;
+        }
+
+        }
+
+        @media only screen and (max-width: 1236px){
+            .container {
+            display: grid;
+            grid-template-columns: 0.5fr 5fr 0.5fr;
+            grid-template-rows: 0rem 30rem 55rem 55rem 55rem 20rem 10rem;
+            gap: 2.5%;
+        }
+
+        .navLinkContent p {
+            display: inline-block;
+            padding-left: 2.5%;
+            margin-left: 5%;
+        }
+
+        .home .introImg img {
+            width: 110%;
+            height: 100%;
+            margin-left: 5%;
+            opacity: 0.8;
+        }
+
+
+    }
+
+    @media only screen and (max-width: 1216px){
+            .container {
+            display: grid;
+            grid-template-columns: 0.5fr 5fr 0.5fr;
+            grid-template-rows: 0rem 30rem 55rem 55rem 55rem 20rem 10rem;
+            gap: 2.5%;
+        }
+
+        .navLinkContent p {
+            display: inline-block;
+            padding-left: 2.5%;
+            margin-left: 5%;
+        }
+
+        .home .introImg img {
+            width: 110%;
+            height: 100%;
+            margin-left: 5%;
+            opacity: 0.8;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navBar">
+            <div class="logo">Rajesh <span style="background-image: linear-gradient(to top,rgb(139, 14, 14),rgb(234, 104, 104));background-clip: text;
+                color: transparent;
+                -webkit-background-clip: text;">Thapa</span></div>
+            <div class="navLinkContent">
+                <p class="navText"><a href="">Home</a></p>
+                <p class="navText"><a href="#jumpSkills">Skills</a></p>
+                <p class="navText"><a href="#jumpProjects">Projects</a></p>
+                <p class="navText"><a href="#jumpBlogs">Blogs</a></p>
+                <p class="navText"><a href="#jumpContacts">Contact</a></p>
+            </div>
+        </div>
+        <div class="home">
+            <div class="aboutMe">
+                <p class="introp1">Hi ! <span
+                        style="background-image: linear-gradient(to top,var(--tw-gradient-stops));--tw-gradient-from: #f97316;--tw-gradient-to: rgb(249 115 22 / 0);--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);--tw-gradient-to: #eab308;background-clip: text;color: #0000;-webkit-background-clip: text;">Welcome</span>
+                    to my <span style="background-image: linear-gradient(to top, var(--tw-gradient-stops));
+                    --tw-gradient-from: #f97316;
+                    --tw-gradient-to: rgb(249 115 22 / 0);
+                    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+                    --tw-gradient-to: #ec4899;
+                    background-clip: text;
+                    color: #0000;
+                    -webkit-background-clip: text;">website</span></p>
+                <p class="introp2">Rajesh Thapa</p>
+                <p class="introp3">Computer science student & Web developer</p>
+                <p class="introp4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magnam ipsum
+                    tenetur! Numquam tempore, accusamus doloribus sit, ipsam eum alias autem perspiciatis quis
+                    perferendis, similique itaque laudantium voluptates assumenda adipisci!</p>
+                <div class="links">
+                    <div class="fbLogoIntro dot"><a href="https://www.facebook.com/profile.php?id=100083013861017"
+                            target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></div>
+                    <div class="rdtLogoIntro dot"><a href="https://www.reddit.com/user/rajeshthapa69" target="_blank"><i
+                                class="fa-brands fa-reddit fa-2xl"></i></a></div>
+                    <div class="ghLogoIntro dot"><a href="https://github.com/rajeshthapa69" target="_blank"><i
+                                class="fa-brands fa-github fa-2xl"></i></a></div>
+                    <div class="emlLogoIntro dot"><a href="mailto:www.iamrajeshthapa69@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope fa-2xl"></i></a></div>
+                </div>
+            </div>
+            <div class="introImg"><img src="introImg.png" alt=""></div>
+        </div>
+        <div class="skills">
+            <div class="skillsHeadTitle">
+                <p class="skillsp1" id="jumpSkills">My <span style="background-image: linear-gradient(to top,#6d26b4,#a755f7);background-clip: text;
+                    color: transparent;
+                    -webkit-background-clip: text;">SkillSets</span></p>
+                <p class="skillsp2">I have learned a lot of technologies in my 2 years of development experience <br> Here are some of them.</p>
+            </div>
+            <div class="mySkills">
+                <p><i class="fa-solid fa-bookmark"></i> C</p>
+                <p><i class="fa-solid fa-bookmark"></i> C++</p>
+                <p><i class="fa-solid fa-bookmark"></i> Python</p>
+                <p><i class="fa-solid fa-bookmark"></i> Kali Linux</p>
+                <p><i class="fa-solid fa-bookmark"></i> Javascript</p>
+                <p><i class="fa-solid fa-bookmark"></i> React</p>
+                <p><i class="fa-solid fa-bookmark"></i> Django</p>
+                <p><i class="fa-solid fa-bookmark"></i> PHP</p>
+                <p><i class="fa-solid fa-bookmark"></i> MySQL</p>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="projectsHeadTitle" id="jumpProjects">My <span style="background-image: linear-gradient(to top,rgb(45, 93, 93),rgb(49, 236, 236));background-clip: text;
+                color: transparent;
+                -webkit-background-clip: text;">Projects</span></div>
+            <div class="classForProjectsForNestedGrid">
+                <div class="projt1">
+                    <div class="cardImg"><img src="projt1Img.jpg" alt=""></div>
+                    <p class="projtTitle">This is Title</p>
+                    <div class="projtFooter">
+                        <p class="projtAuthor">Rajesh Thapa</p>
+                        <p class="projtUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="projt2">
+                    <div class="cardImg"><img src="projt1Img.jpg" alt=""></div>
+                    <p class="projtTitle">This is Title</p>
+                    <div class="projtFooter">
+                        <p class="projtAuthor">Rajesh Thapa</p>
+                        <p class="projtUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="projt3">
+                    <div class="cardImg"><img src="projt1Img.jpg" alt=""></div>
+                    <p class="projtTitle">This is Title</p>
+                    <div class="projtFooter">
+                        <p class="projtAuthor">Rajesh Thapa</p>
+                        <p class="projtUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="projt4">
+                    <div class="cardImg"><img src="projt1Img.jpg" alt=""></div>
+                    <p class="projtTitle">This is Title</p>
+                    <div class="projtFooter">
+                        <p class="projtAuthor">Rajesh Thapa</p>
+                        <p class="projtUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="projt5">
+                    <div class="cardImg"><img src="projt1Img.jpg" alt=""></div>
+                    <p class="projtTitle">This is Title</p>
+                    <div class="projtFooter">
+                        <p class="projtAuthor">Rajesh Thapa</p>
+                        <p class="projtUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="projt6">
+                    <div class="cardImg"><img src="projt1Img.jpg" alt=""></div>
+                    <p class="projtTitle">This is Title</p>
+                    <div class="projtFooter">
+                        <p class="projtAuthor">Rajesh Thapa</p>
+                        <p class="projtUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogs">
+            <div class="blogsHeadTitle" id="jumpBlogs">My <span style="background-image: linear-gradient(to top,rgb(162, 75, 8),rgb(215, 201, 50));background-clip: text;
+                color: transparent;
+                -webkit-background-clip: text;">Blogs</span></div>
+            <div class="classForBlogsForNestedGrid">
+                <div class="blog1">
+                    <div class="cardImg"><img src="blog1Img.jpg" alt=""></div>
+                    <p class="blogTitle">This is Title</p>
+                    <div class="blogFooter">
+                        <p class="blogAuthor">Rajesh Thapa</p>
+                        <p class="blogUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="blog2">
+                    <div class="cardImg"><img src="blog1Img.jpg" alt=""></div>
+                    <p class="blogTitle">This is Title</p>
+                    <div class="blogFooter">
+                        <p class="blogAuthor">Rajesh Thapa</p>
+                        <p class="blogUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="blog3">
+                    <div class="cardImg"><img src="blog1Img.jpg" alt=""></div>
+                    <p class="blogTitle">This is Title</p>
+                    <div class="blogFooter">
+                        <p class="blogAuthor">Rajesh Thapa</p>
+                        <p class="blogUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="blog4">
+                    <div class="cardImg"><img src="blog1Img.jpg" alt=""></div>
+                    <p class="blogTitle">This is Title</p>
+                    <div class="blogFooter">
+                        <p class="blogAuthor">Rajesh Thapa</p>
+                        <p class="blogUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="blog5">
+                    <div class="cardImg"><img src="blog1Img.jpg" alt=""></div>
+                    <p class="blogTitle">This is Title</p>
+                    <div class="blogFooter">
+                        <p class="blogAuthor">Rajesh Thapa</p>
+                        <p class="blogUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+                <div class="blog6">
+                    <div class="cardImg"><img src="blog1Img.jpg" alt=""></div>
+                    <p class="blogTitle">This is Title</p>
+                    <div class="blogFooter">
+                        <p class="blogAuthor">Rajesh Thapa</p>
+                        <p class="blogUpldDAndT"><i class="fa-solid fa-clock"></i> XX/XX/20XX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contactHeadTitle">
+                <p class="contactcp1" id="jumpContacts" style="background-image: linear-gradient(to top, var(--tw-gradient-stops));
+                --tw-gradient-from: #15803d;
+                --tw-gradient-to: rgb(21 128 61 / 0);
+                --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+                --tw-gradient-to: #4ade80;
+                background-clip: text;
+                color: #0000;
+                -webkit-background-clip: text;">Links</p>
+                <p class="contactcp2">Get in touch with me, here are some links to my socials</p>
+            </div>
+            <div class="fb"><a href="https://www.facebook.com/profile.php?id=100083013861017"
+                    target="_blank">Facebook</a></div>
+            <div class="rdt"><a href="https://www.reddit.com/user/rajeshthapa69" target="_blank">Reddit</a></div>
+            <div class="gml"><a href="mailto:www.iamrajeshthapa69@gmail.com" target="_blank">Gmail</a></div>
+            <div class="yt"><a href="" target="_blank">YouTube</a></div>
+            <div class="dc"><a href="https://discordapp.com/users/1135507839348133890" target="_blank">Discord</a></div>
+            <div class="gh"><a href="https://github.com/rajeshthapa69" target="_blank">GitHub</a></div>
+        </div>
+        <div class="footer">
+            <div class="flogo">Rajesh <span style="background-image: linear-gradient(to top,rgb(139, 14, 14),rgb(234, 104, 104));background-clip: text;
+                color: transparent;
+                -webkit-background-clip: text;">Thapa</span></div>
+            <div class="cpr">Copyright &#169 Rajesh Thapa</div>
+            <div class="version">V1.1</div>
+        </div>
+    </div>
+</body>
+
+</html>
